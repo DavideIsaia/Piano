@@ -10,10 +10,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
 }
 
 .piano-top {
-  background: linear-gradient(90deg, rgba(121,52,9,1) 5%, rgba(0,0,0,1) 35%);
+  background: linear-gradient(90deg, rgba(121, 52, 9, 1) 5%, rgba(0, 0, 0, 1) 35%);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -24,7 +25,7 @@ body {
 }
 
 img {
-  width: 120px;
+  width: 110px;
 }
 
 .piano-keys {
@@ -33,7 +34,7 @@ img {
 }
 
 .white {
-  background-color: white;
+  background: white;
   height: 100%;
   width: 80px;
   border-left: 2px solid black;
@@ -43,11 +44,11 @@ img {
 }
 
 .white:active {
-  background-color: lightgray;
+  background: linear-gradient(white 15%, lightgray);
 }
 
 .black {
-  background: linear-gradient(rgb(59, 59, 59) 5%, black);
+  background: linear-gradient(black 5%, rgb(59, 59, 59));
   height: 60%;
   width: 44px;
   border-left: 6px solid black;
@@ -60,4 +61,24 @@ img {
 
 .black:active {
   background: black;
+}
+
+.key {
+  position: relative;
+}
+
+.key span {
+  position: absolute;
+  bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.black span {
+  color: white;
+  font-size: 0.6rem;
 }
